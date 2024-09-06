@@ -654,10 +654,13 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .footer-logo  .logo {
 	margin-top: 20px;
 	display: inline-block;
+    margin: 0;
+    display: grid;
+    place-items: center;
 }
 
 .footer-logo  .logo > img {
-	max-height:30px;
+	max-height:100px;
 }
 
 /* -- Footer Nav -- */

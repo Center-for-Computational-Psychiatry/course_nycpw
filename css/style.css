@@ -394,6 +394,15 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
             transform: translateY(-10px) rotate(-45deg);
 }
 
+.schedule-table {
+    table-layout: fixed; /* Ensures the table layout is fixed */
+    width: 100%; /* Table spans the full width of its container */
+}
+
+.fixed-width {
+    width: 25%; /* Sets each column to occupy 25% of the table width */
+}
+
 /*------------------------------------*\
 	Hero Area
 \*------------------------------------*/

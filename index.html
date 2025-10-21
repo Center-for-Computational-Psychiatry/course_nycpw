@@ -33,6 +33,38 @@
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<style>
+		/* Set your base row height once */
+		:root { --slot-h: 64px; } /* tweak to taste, e.g., 56px or 72px */
+
+		#schedule table {
+			table-layout: fixed;   /* prevents columns from resizing based on content */
+			width: 100%;
+		}
+
+		#schedule th, 
+		#schedule td {
+			vertical-align: middle;   /* centers content vertically */
+			overflow-wrap: anywhere;  /* avoid overflow on long text */
+			word-break: break-word;
+		}
+
+		#schedule tbody tr {
+			height: var(--slot-h);    /* makes all rows equal height */
+		}
+
+		/* Optional: smaller padding if you need more room */
+		#schedule .table td, 
+		#schedule .table th {
+			padding: 8px;
+		}
+
+		/* Mobile: let rows auto-expand so text isn’t cramped */
+		@media (max-width: 640px) {
+			#schedule tbody tr { height: auto; }
+		}
+		</style>
+
     </head>
 	<body>
 
@@ -337,131 +369,161 @@
 							</thead>
 							
 							<tbody>
-								<tr>
-									<td style="border: 2px solid black;">08:00 AM</td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>BREAKFAST + REGISTRATION</strong></td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>BREAKFAST</strong></td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>BREAKFAST</strong></td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">08:30 AM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">09:00 AM</td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>OPENING REMARKS + LECTURE</strong><br>Introduction to Computational Psychiatry</td>
-									<td style="border: 2px solid black;" rowspan="3"><strong>TUTORIAL 3</strong><br>Shawn Rhoads<br>Fitting Models to Behavioral Data</td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>LECTURE</strong><br>Laura Berner<br>Clinically Relevant Computational Psychiatry</td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">09:30 AM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">10:00 AM</td>
-									<td style="border: 2px solid black;" rowspan="4"><strong>TUTORIAL 1</strong><br>Angela Radulescu<br>Reinforcement Learning</td>
-									<td style="border: 2px solid black;" rowspan="4"><strong>TUTORIAL 6</strong><br>Saren Seeley<br>Study Design & Replicability</td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">10:30 AM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<td style="border: 2px solid black;" rowspan="3"><strong>TUTORIAL 4</strong><br>Blair Shevlin<br>Drift Diffusion Modeling</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">11:00 AM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">11:30 AM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">12:00 PM</td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>LUNCH</strong></td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>LUNCH</strong></td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>LUNCH</strong></td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">12:30 PM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">01:00 PM</td>
-									<td style="border: 2px solid black;" rowspan="4"><strong>TUTORIAL 2</strong><br>Vincenzo Fiore<br>Bayesian Inference</td>
-									<td style="border: 2px solid black;" rowspan="3"><strong>TUTORIAL 5</strong><br>Ülgen Kilic<br>Network Theory for Psychiatry</td>
-									<td style="border: 2px solid black;" rowspan="4"><strong>BREAKOUT PROJECTS*</strong></td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">01:30 PM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">02:00 PM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">02:30 PM</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<td style="border: 2px solid black;"><strong>COFFEE BREAK</strong></td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">03:00 PM</td>
-									<td style="border: 2px solid black;"><strong>COFFEE BREAK</strong></td>
-									<td style="border: 2px solid black;" rowspan="6"><strong>BREAKOUT PROJECTS*</strong></td>
-									<td style="border: 2px solid black;"><strong>COFFEE BREAK</strong></td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">03:30 PM</td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>LECTURE</strong><br>Kim Stachenfeld<br>LLMs for Cognitive Modeling</td>
-									<td style="border: 2px solid black;" rowspan="2"><strong>BREAKOUT PROJECTS*</strong></td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">04:00 PM</td>
-									<!-- Monday covered by lecture rowspan -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">04:30 PM</td>
-									<td style="border: 2px solid black;" rowspan="3"><strong>BREAKOUT PROJECTS*</strong></td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<td style="border: 2px solid black;"><strong>PROJECTS WRAP-UP*</strong></td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">05:00 PM</td>
-									<!-- Monday covered by BREAKOUT PROJECTS* rowspan -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<td style="border: 2px solid black;" rowspan="3"><strong>SOCIAL EVENT*</strong></td>
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">05:30 PM</td>
-									<!-- Monday covered by BREAKOUT PROJECTS* rowspan -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
-								<tr>
-									<td style="border: 2px solid black;">06:00 PM</td>
-									<td style="border: 2px solid black;"><strong>DINNER</strong><br>On your own</td>
-									<td style="border: 2px solid black;"><strong>DINNER</strong><br>On your own</td>
-									<!-- <td style="border: 2px solid black;"></td> -->
-								</tr>
+							<tr>
+								<td style="border: 2px solid black;">08:00 AM</td>
+								<td style="border: 2px solid black;" rowspan="2"><strong>BREAKFAST + REGISTRATION</strong><br>[8:00–9:00]</td>
+								<td style="border: 2px solid black;" rowspan="2"><strong>BREAKFAST</strong><br>[8:00–9:00]</td>
+								<td style="border: 2px solid black;" rowspan="2"><strong>BREAKFAST</strong><br>[8:00–9:00]</td>
+							</tr>
+							<tr>
+								<td style="border: 2px solid black;">08:30 AM</td>
+							</tr>
+
+							<!-- 9:00 AM -->
+							<tr>
+								<td style="border: 2px solid black;">09:00 AM</td>
+								<!-- CHANGED (Mon): 9:00–9:30 only -->
+								<td style="border: 2px solid black;">
+								<strong>OPENING + INTRODUCTION</strong>
+								</td>
+								<td style="border: 2px solid black;" rowspan="3">
+								<strong>TUTORIAL 3</strong><br>Shawn Rhoads<br>Fitting Models to Behavioral Data<br>[9:00–10:30]
+								</td>
+								<td style="border: 2px solid black;" rowspan="2">
+								<strong>LECTURE</strong><br>Laura Berner<br>Clinically Relevant Computational Psychiatry<br>[9:00–10:00]
+								</td>
+							</tr>
+
+							<!-- 9:30 AM -->
+							<tr>
+								<td style="border: 2px solid black;">09:30 AM</td>
+								<!-- ADDED (Mon): Tutorial 1 Part 1, 9:30–10:30 -->
+								<td style="border: 2px solid black;" rowspan="2">
+								<strong>TUTORIAL 1</strong><br>Angela Radulescu<br>Reinforcement Learning (Part 1)<br>[9:30–10:30]
+								</td>
+							</tr>
+
+							<!-- 10:00 AM -->
+							<tr>
+								<td style="border: 2px solid black;">10:00 AM</td>
+								<!-- Monday covered by Part 1 rowspan -->
+								<!-- Tuesday covered by TUTORIAL 3 rowspan -->
+								<!-- Wednesday covered by LECTURE rowspan -->
+								<td style="border: 2px solid black;" rowspan="2">
+								<strong>TUTORIAL 6</strong><br>Saren Seeley<br>Study Design & Replicability<br>[10:00–11:00]
+								</td>
+							</tr>
+
+							<!-- 10:30 AM -->
+							<tr>
+								<td style="border: 2px solid black;">10:30 AM</td>
+								<!-- ADDED (Mon): BREAK 10:30–11:00 -->
+								<td style="border: 2px solid black;"><strong>BREAK</strong></td>
+								<td style="border: 2px solid black;" rowspan="3">
+								<strong>TUTORIAL 4</strong><br>Blair Shevlin<br>Drift Diffusion Modeling<br>[10:30–12:00]
+								</td>
+								<!-- CHANGED (Wed): TUTORIAL 6 now 10:00–11:00 only (rowspan=2 starts at 10:00), so no cell here -->
+							</tr>
+
+							<!-- 11:00 AM -->
+							<tr>
+								<td style="border: 2px solid black;">11:00 AM</td>
+								<!-- ADDED (Mon): Tutorial 1 Part 2, 11:00–12:00 -->
+								<td style="border: 2px solid black;" rowspan="2">
+								<strong>TUTORIAL 1</strong><br>Angela Radulescu<br>Reinforcement Learning (Part 2)<br>[11:00–12:00]
+								</td>
+								<!-- Tuesday covered by TUTORIAL 4 rowspan -->
+								<!-- ADDED (Wed): Panel Discussion 11:00–12:00 -->
+								<td style="border: 2px solid black;" rowspan="2">
+								<strong>PANEL DISCUSSION</strong><br>[11:00–12:00]
+								</td>
+							</tr>
+
+							<!-- 11:30 AM -->
+							<tr>
+								<td style="border: 2px solid black;">11:30 AM</td>
+								<!-- Monday covered by Part 2 rowspan -->
+								<!-- Tuesday covered by TUTORIAL 4 rowspan -->
+								<!-- Wednesday covered by Panel Discussion rowspan -->
+							</tr>
+
+							<!-- 12:00 PM -->
+							<tr>
+								<td style="border: 2px solid black;">12:00 PM</td>
+								<td style="border: 2px solid black;" rowspan="2"><strong>LUNCH</strong><br>[12:00–1:00]</td>
+								<td style="border: 2px solid black;" rowspan="2"><strong>LUNCH</strong><br>[12:00–1:00]</td>
+								<td style="border: 2px solid black;" rowspan="2"><strong>LUNCH</strong><br>[12:00–1:00]</td>
+							</tr>
+
+							<!-- 12:30 PM -->
+							<tr>
+								<td style="border: 2px solid black;">12:30 PM</td>
+							</tr>
+
+							<!-- 1:00 PM -->
+							<tr>
+								<td style="border: 2px solid black;">01:00 PM</td>
+								<td style="border: 2px solid black;" rowspan="4">
+								<strong>TUTORIAL 2</strong><br>Vincenzo Fiore<br>Bayesian Inference<br>[1:00–3:00]
+								</td>
+								<td style="border: 2px solid black;" rowspan="3">
+								<strong>TUTORIAL 5</strong><br>Ülgen Kilic<br>Network Theory for Psychiatry<br>[1:00–2:30]
+								</td>
+								<td style="border: 2px solid black;" rowspan="4"><strong>BREAKOUT PROJECTS*</strong><br>[1:00–3:00]</td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">01:30 PM</td>
+							</tr>
+							<tr>
+								<td style="border: 2px solid black;">02:00 PM</td>
+							</tr>
+							<tr>
+								<td style="border: 2px solid black;">02:30 PM</td>
+								<td style="border: 2px solid black;"><strong>COFFEE BREAK</strong></td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">03:00 PM</td>
+								<td style="border: 2px solid black;"><strong>COFFEE BREAK</strong></td>
+								<td style="border: 2px solid black;" rowspan="6"><strong>BREAKOUT PROJECTS*</strong><br>[3:00–6:00]</td>
+								<td style="border: 2px solid black;"><strong>COFFEE BREAK</strong></td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">03:30 PM</td>
+								<td style="border: 2px solid black;" rowspan="2">
+								<strong>LECTURE</strong><br>Kim Stachenfeld<br>LLMs for Cognitive Modeling<br>[3:30–4:30]
+								</td>
+								<td style="border: 2px solid black;" rowspan="2"><strong>BREAKOUT PROJECTS*</strong><br>[3:30–4:30]</td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">04:00 PM</td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">04:30 PM</td>
+								<td style="border: 2px solid black;" rowspan="3"><strong>BREAKOUT PROJECTS*</strong><br>[4:30–6:00]</td>
+								<td style="border: 2px solid black;"><strong>PROJECTS WRAP-UP*</strong></td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">05:00 PM</td>
+								<td style="border: 2px solid black;" rowspan="3"><strong>SOCIAL EVENT*</strong><br>(Food/drinks available for purchase)</td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">05:30 PM</td>
+							</tr>
+
+							<tr>
+								<td style="border: 2px solid black;">06:00 PM</td>
+								<td style="border: 2px solid black;"><strong>DINNER</strong><br>On your own</td>
+								<td style="border: 2px solid black;"><strong>DINNER</strong><br>On your own</td>
+							</tr>
 							</tbody>
+
 						</table>
 						* indicates in-person only events
 					</div>

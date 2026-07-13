@@ -77,6 +77,13 @@ a:focus{
 	opacity: 0.9;
 }
 
+a:focus-visible,
+button:focus-visible,
+.main-button:focus-visible {
+	outline: 3px solid #DC6B19;
+	outline-offset: 3px;
+}
+
 ul,ol{
     margin: 0;
     padding: 0;
@@ -194,6 +201,18 @@ blockquote:before{
 	opacity:1;
 }
 
+.status-button {
+	cursor: default;
+}
+
+.status-button:hover,
+.status-button:focus {
+	background-color: #DC6B19;
+	border-color: transparent;
+	color: #FFF;
+	opacity: 1;
+}
+
 /* --  Input  -- */
 input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="url"], input[type="tel"], textarea {
     height: 40px;
@@ -258,7 +277,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 #header.transparent-nav .main-menu li a {
-	color:#FFF;
+	color:#FFF !important;
 }
 
 .main-menu li a {
@@ -647,6 +666,29 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 #courses .center-btn {
 	text-align:center;
 	margin-top:40px;
+}
+
+.course-name {
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	color: #374050;
+	font-weight: 700;
+}
+
+.schedule-placeholder {
+	font-size: 24px;
+	font-weight: 600;
+	color: #374050;
+	margin-bottom: 5px;
+}
+
+.previous-years {
+	margin-top: 20px;
+}
+
+.schedule-empty-cell {
+	border: none !important;
+	background: transparent !important;
 }
 
 /*------------------------------------*\
@@ -1259,8 +1301,42 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 
 @media only screen and (max-width: 767px) {
 	/*-- Hero area --*/
+	#home .container,
+	#home [class*='col-'] {
+		width: 100% !important;
+		max-width: 100%;
+	}
+
+	#home .container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#home .row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	#home [class*='col-'] {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#home .col-md-8 {
+		max-width: 360px;
+	}
+
+	.hero-title-line {
+		display: block;
+	}
+
 	.hero-area h1 {
-		font-size:30px;
+		font-size:28px;
+		overflow-wrap: break-word;
+	}
+
+	.hero-area .lead {
+		overflow-wrap: break-word;
 	}
 
 	/* -- Breadcrumb -- */
@@ -1275,6 +1351,52 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 @media only screen and (max-width: 480px) {
+	/*-- Hero area --*/
+	#home .container,
+	#home [class*='col-'] {
+		width: 100% !important;
+		max-width: 100%;
+	}
+
+	#home .container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#home .row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	#home [class*='col-'] {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.hero-title-line {
+		display: block;
+	}
+
+	.hero-area h1 {
+		font-size: 26px;
+		line-height: 1.2;
+	}
+
+	.hero-area h2 {
+		font-size: 24px;
+	}
+
+	.hero-area .lead {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	.main-button {
+		max-width: 100%;
+		white-space: normal;
+		text-align: center;
+	}
+
 	/*-- Courses --*/
 	#courses-wrapper [class*='col-xs'] {
 		width:100%;

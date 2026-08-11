@@ -247,7 +247,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .navbar-brand .logo > img {
-	max-height:30px;
+	max-height:50px;
+}
+
+/* Give the header enough height to contain the larger logo */
+#header .container {
+	min-height:70px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -284,6 +289,13 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	text-transform:uppercase;
 	-webkit-transition:0.2s all;
 	transition:0.2s all;
+}
+
+/* Vertically center the horizontal menu within the taller header */
+@media only screen and (min-width: 768px) {
+	#nav .main-menu {
+		margin-top:14px;
+	}
 }
 
 .main-menu li a:hover , .main-menu li a:focus {
@@ -358,7 +370,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	padding: 0;
 	height: 40px;
 	width: 40px;
-	margin-top: 5px;
+	margin-top: 15px;
 	z-index:99;
 }
 

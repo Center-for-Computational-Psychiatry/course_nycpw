@@ -431,7 +431,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 .fixed-width {
-    width: 25%; /* Sets each column to occupy 25% of the table width */
+    width: 20%; /* Sets each column to occupy 20% of the table width (TIME + 4 days) */
 }
 
 /*------------------------------------*\

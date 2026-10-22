@@ -1,0 +1,13 @@
+# marimo session cache
+__marimo__/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
+
+# Downloaded project data (large; get it from OSF instead)
+data/
